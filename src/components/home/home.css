@@ -1,0 +1,245 @@
+.continer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg-color);
+  gap: 50px;
+  padding: 100px 20px 40px; 
+  box-sizing: border-box;
+  transition: background 0.4s ease;
+}
+
+.left {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.topbtn {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 14px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 20px;
+  border: 1px solid var(--border-pink);
+  background: rgba(255, 20, 243, 0.04);
+  box-shadow: 0 0 6px rgba(255, 20, 243, 0.08);
+}
+
+.topbtn h2 {
+  color: var(--text-color);
+  font-size: 13px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.topbtn svg {
+  color: var(--accent-pink);
+  font-size: 12px;
+  animation: pulse-dot 1.8s infinite ease-in-out;
+}
+
+.text h1 {
+  color: var(--text-color);
+  font-size: 38px;
+  margin: 8px 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text .name,
+.text h2 {
+  background: linear-gradient(135deg, var(--accent-pink) 0%, #ff80df 60%, var(--text-color) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 800;
+}
+
+.text h2 {
+  font-size: 24px;
+  min-height: 38px;
+  margin: 8px 0;
+}
+
+.text p {
+  color: var(--text-color);
+  opacity: 0.8;
+  line-height: 1.6;
+  font-size: 14.5px;
+}
+
+.links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 20, 243, 0.05);
+  border: 1px solid var(--border-pink);
+  transition: all 0.3s ease;
+}
+
+.links svg {
+  font-size: 20px;
+  color: var(--accent-pink);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.links a:hover {
+  background: var(--accent-pink);
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 10px rgba(255, 20, 243, 0.35);
+  transform: translateY(-2px);
+}
+
+.links a:hover svg {
+  color: #ffffff;
+}
+
+.btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btns a {
+  display: flex;
+  height: 42px;
+  width: 150px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btns a.primary-btn {
+  background: linear-gradient(135deg, var(--accent-pink), #99008a);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 20, 243, 0.25);
+}
+
+.btns a.primary-btn:hover {
+  box-shadow: 0 0 15px rgba(255, 20, 243, 0.45);
+  transform: translateY(-2px);
+}
+
+.btns a.secondary-btn {
+  color: var(--text-color);
+  border: 1px solid var(--border-pink);
+  background: rgba(255, 20, 243, 0.03);
+}
+
+.btns a.secondary-btn:hover {
+  background: rgba(255, 20, 243, 0.12);
+  border-color: var(--accent-pink);
+  transform: translateY(-2px);
+}
+.code-card-wrapper {
+  background: var(--card-bg);
+  border: 1px solid var(--border-pink);
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.code-card-header {
+  background: rgba(255, 20, 243, 0.05);
+  border-bottom: 1px solid var(--border-pink);
+}
+.react {
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 900px) {
+  .continer {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 100px 20px 40px;
+    gap: 40px;
+  }
+
+  .left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .topbtn {
+    margin: 0 auto;
+  }
+
+  .text h1 {
+    font-size: 32px;
+  }
+
+  .text h2 {
+    font-size: 20px;
+  }
+
+  .links {
+    justify-content: center;
+  }
+
+  .btns {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .right {
+    width: 100% !important;
+    max-width: 360px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .text h1 {
+    font-size: 26px;
+  }
+
+  .btns {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .btns a {
+    width: 100%;
+    max-width: 250px;
+  }
+}
